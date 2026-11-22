@@ -21,7 +21,10 @@ function readInitialTasks() {
     const savedTasks = window.localStorage.getItem(STORAGE_KEY);
     if (!savedTasks) return copySampleTasks();
 
-    const parsedTasks = JSON.parse(savedTasks);
+    const savedValue = JSON.parse(savedTasks);
+    const parsedTasks = Array.isArray(savedValue)
+      ? savedValue.map((task) => createTask(task))
+      : savedValue;
     return isValidTaskCollection(parsedTasks) ? parsedTasks : copySampleTasks();
   } catch {
     return copySampleTasks();

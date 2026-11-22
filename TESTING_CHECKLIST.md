@@ -26,6 +26,7 @@ Run `npm run dev`, open the local URL in a browser, and use a fresh task list un
 - [ ] **LocalStorage:** Create or edit a task, then inspect the `focusboard.tasks.v1` entry in DevTools > Application > Local Storage. Confirm it contains the current task array.
 - [ ] **Refresh:** Reload the page. Confirm the edited tasks remain and sample data does not replace them.
 - [ ] **Invalid saved data:** With a backup of the current entry, replace it temporarily with invalid JSON. Reload and confirm the app recovers safely; restore the original entry afterward.
+- [ ] **Older task shape:** Test saved tasks missing optional description, category, or due-date fields. Confirm the app renders safely and fills defaults.
 - [ ] **Mobile (390px):** Confirm mobile navigation, cards, filters, carousel, and forms fit without horizontal scrolling. Check controls are easy to tap.
 - [ ] **Tablet (768px):** Confirm navigation and dashboard sections use the available width cleanly.
 - [ ] **Desktop (1440px):** Confirm sidebar, dashboard sections, and task rows align with the reference layout.
