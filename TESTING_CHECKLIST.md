@@ -5,6 +5,7 @@ Run `npm run dev`, open the local URL in a browser, and use a fresh task list un
 ## Startup and task actions
 
 - [ ] **Startup:** App loads without a blank screen or visible console error.
+- [ ] **Status filter counts:** Confirm each status tab renders its count without a console exception.
 - [ ] **Create:** Add a task with title, description, category, status, priority, and due date. Confirm the card appears and the form closes with success feedback.
 - [ ] **Validation:** Submit an empty title (and category if required). Confirm the form stays open and shows a clear field error.
 - [ ] **Edit:** Change a task title and priority. Confirm only that task changes and its ID remains the same.

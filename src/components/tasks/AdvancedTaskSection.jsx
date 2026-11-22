@@ -36,6 +36,7 @@ export default function AdvancedTaskSection({ tasks, onStatusChange }) {
       </div>
 
       <TaskFilters
+        tasks={tasks}
         onPriorityFilterChange={setPriorityFilter}
         onSearchChange={setSearchValue}
         onStatusFilterChange={setStatusFilter}
@@ -54,16 +55,6 @@ export default function AdvancedTaskSection({ tasks, onStatusChange }) {
           {TASK_SORT_OPTIONS.map((option) => <option key={option.value} value={option.value}>{option.label}</option>)}
         </select>
       </label>
-
-      {searchValue.length > 0 && (
-        <button
-          className="mb-3 rounded-md px-2 py-1 text-xs font-medium text-primary underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary"
-          onClick={() => setSearchValue("")}
-          type="button"
-        >
-          Clear search
-        </button>
-      )}
 
       {visibleTasks.length > 0 ? (
         <TaskList onStatusChange={onStatusChange} tasks={sortedTasks} />

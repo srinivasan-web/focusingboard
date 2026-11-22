@@ -4,7 +4,7 @@ import Icon from "../ui/Icon.jsx";
 import Select from "../ui/Select.jsx";
 
 export default function TaskFilters({
-  tasks,
+  tasks = [],
   statusFilter,
   onStatusFilterChange,
   priorityFilter,
