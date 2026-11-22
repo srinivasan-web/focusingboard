@@ -1,0 +1,39 @@
+:where(button, a[href], input, select, textarea, [role="button"]):focus-visible {
+  outline: 2px solid var(--color-primary, currentColor);
+  outline-offset: 2px;
+}
+
+:where(.flex, .grid) > * {
+  min-width: 0;
+}
+
+:where(input, select, textarea) {
+  max-width: 100%;
+}
+
+html,
+body,
+#root {
+  max-width: 100%;
+}
+
+@media (pointer: coarse) {
+  :where(button, input, select, textarea, [role="button"]) {
+    min-height: 44px;
+  }
+
+  :where(button, [role="button"]) {
+    min-width: 44px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
