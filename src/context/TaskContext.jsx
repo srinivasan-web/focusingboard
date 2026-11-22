@@ -68,7 +68,7 @@ export function TaskProvider({ children }) {
 
   useEffect(() => {
     try {
-    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(tasks));
+      window.localStorage.setItem(STORAGE_KEY, JSON.stringify(tasks));
       setStorageError("");
     } catch {
       setStorageError("Your changes could not be saved in this browser.");

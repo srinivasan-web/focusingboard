@@ -52,7 +52,11 @@ export default function AdvancedTaskSection({ tasks, onStatusChange }) {
           onChange={(event) => setSortOrder(event.target.value)}
           value={sortOrder}
         >
-          {TASK_SORT_OPTIONS.map((option) => <option key={option.value} value={option.value}>{option.label}</option>)}
+          {TASK_SORT_OPTIONS.map((option) => (
+            <option key={option.value} value={option.value}>
+              {option.label}
+            </option>
+          ))}
         </select>
       </label>
 
